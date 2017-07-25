@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <ion-title>
+      Startseite
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content public class="home" padding>
+ 
+      <!-- öffne die timerpage -->            
+        <button ion-button icon-start round outline [navPush]="timerpage">
+          <ion-icon name="md-alarm"></ion-icon>
+          Stoppuhr
+        </button>    
+      
+
+      <!-- öffne die positionpage -->      
+        <button ion-button icon-start round outline [navPush]="positionpage">
+          <ion-icon name="md-qr-scanner"></ion-icon>
+          Positionsbestimmung
+        </button>       
+    
+
+      <!-- öffne die weightpage -->     
+        <button ion-button icon-start round outline [navPush]="weightpage">
+          <ion-icon name="md-square"></ion-icon>
+          Gewichtsmessung
+        </button>       
+      
+
+</ion-content>

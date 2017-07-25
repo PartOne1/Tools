@@ -1,0 +1,26 @@
+<!--
+  Generated template for the Weight page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Gewichtsmessung</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+     
+      <button ion-button id="WeightBut" round outline (click)="weigh();">Wiegen</button>      
+       <output  id="display-weight">00.053</output>
+      <button ion-button id="MeasBut" round outline (click)="measure();">Messen</button>    
+      <div id="bList"></div> 
+      
+      <div id="statusDiv"></div>
+      <div id="counter"></div>  
+</ion-content>
+      

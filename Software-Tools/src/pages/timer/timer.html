@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Timer page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Stoppuhr</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding>
+
+    <div class="center">
+       <p>Klicken Sie auf Start um die Stoppuhr zu starten</p>
+    </div>
+      
+    <!-- Start/Stop Button für die Stoppuhr-->  
+    
+       <button ion-button id="StartBut" round outline (click)="start();">Start</button>
+      
+    
+
+    <!-- Anzeige ändert sich(Stoppuhr) -->  
+        
+       <output  id="stopwatch">00 : 00 : 00</output>
+
+ 
+</ion-content>
+
