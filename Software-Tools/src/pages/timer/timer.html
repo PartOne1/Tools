@@ -21,12 +21,16 @@
     <!-- Start/Stop Button für die Stoppuhr-->  
     
        <button ion-button id="StartBut" round outline (click)="start();">Start</button>
-      
+       <button ion-button id="StopBut" round outline (click)="stop();">Stop</button>
     
 
     <!-- Anzeige ändert sich(Stoppuhr) -->  
         
        <output  id="stopwatch">00 : 00 : 00</output>
+       <div class="center">
+       <p>Die Zeit beträgt <output id="stoptime"></output> Sekunden</p>
+
+    </div>
 
  
 </ion-content>

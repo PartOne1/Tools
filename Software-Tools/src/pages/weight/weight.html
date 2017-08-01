@@ -14,13 +14,11 @@
 
 
 <ion-content padding>
-     
-      <button ion-button id="WeightBut" round outline (click)="weigh();">Wiegen</button>      
-       <output  id="display-weight">00.053</output>
-      <button ion-button id="MeasBut" round outline (click)="measure();">Messen</button>    
-      <div id="bList"></div> 
       
-      <div id="statusDiv"></div>
-      <div id="counter"></div>  
+    <button ion-button id="WeightBut" round outline (click)="connect();">Verbinden</button>      
+    <output  id="display-weight">000.00</output>
+    <button ion-button id="MeasBut" round outline (click)="measure();">Messen</button>    
+           
+    <div id="counter"></div>  
 </ion-content>
       

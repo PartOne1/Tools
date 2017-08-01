@@ -26,7 +26,7 @@ export class PositionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad Position');
   }
-
+  //Code-Scanner-Funktion
   async scanBarcode(){
       this.options ={
       prompt: 'Bitte Barcode scannen um zum gewählten Ort zu kommen'

@@ -28,11 +28,14 @@ export class WeightPage {
 
 
 
-  weigh(){
+  connect(){
+    //macAddress der Bluetooth-Waage
     var macAddress = "AB:51:0F:00:00:00";
     
-    let aaa = this.bluetoothSerial.connect(macAddress);
-      aaa.subscribe(() => {console.log('Verbunden!');
+    //Verbinde mit der Bluetooth-Waage
+    let con = this.bluetoothSerial.connect(macAddress);
+    //Wenn Verbunden, gebe folgendes aus:  
+    con.subscribe(() => {console.log('Verbunden!');
       document.getElementById("statusDiv").innerHTML = "Verbunden!";
    
       });
@@ -41,41 +44,11 @@ export class WeightPage {
 
 measure(){
 
-var readString;
+var readString = "1";
 var data1;    
-data1.bluetoothSerial.available()
-.then(this.bluetoothSerial.read)
-.then(()=>{document.getElementById("counter").innerHTML = data1;});
-       
+//Waage die Zahl 70 übergeben, damit der Wert ausgelesen werden kann
+this.bluetoothSerial.write([70]).then(function(data){this.bluetoothSerial.read(data)});      
+document.getElementById("counter").innerHTML = readString;
+
 }
-  //  this.bluetoothSerial.readUntil('').then(function(data){document.getElementById("counter").innerHTML = data}).catch(function(){document.getElementById("counter").innerHTML = "kaputt";});
-  
-    /** var output;
-    let observable = this.bluetoothSerial.read().then((data:any) =>{  
-  
-            output = data,
-      document.getElementById("counter").innerHTML = output;
-   
-    }); 
-    
-var data;
-    let observable = this.bluetoothSerial.read();
-    observable.then(() =>{  document.getElementById("counter").innerHTML = data;
-  });*/
- 
-  //let observable = this.bluetoothSerial.subscribe(()=>{this.bluetoothSerial.read().then(function(result){return result;})});
-      
-
-   //var result;
-   //var dat = this.bluetoothSerial.read();
-  // dat.then(function(resolve){ String(resolve)})
-   //.catch(function(reject){document.getElementById("counter").innerHTML= "Geht nicht!" ;});
-   //Promise.resolve(this.bluetoothSerial.read()).then(function(value){document.getElementById("counter").innerHTML = value });
- // var data = dat.then((result)=>{this.bluetoothSerial.read() = result;});
-    //var data = this.bluetoothSerial.read().then(function(result){return result;});
-   // document.getElementById("counter").innerHTML = String(dat);
-    //document.getElementById("counter").innerHTML = String(data);
- //var setting = setTimeout(() => {this.bluetoothSerial.read().then(data= this.bluetoothSerial.read()}, 1000);
-
-
 }

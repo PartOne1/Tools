@@ -20,8 +20,6 @@ import { Camera } from '@ionic-native/camera';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial';
 
 
-
-
 @NgModule({
   declarations: [
     MyApp,
